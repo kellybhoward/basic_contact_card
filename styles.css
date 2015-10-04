@@ -1,0 +1,50 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#wrapper{
+	margin: 0px auto;
+	width: 900px;
+	overflow: hidden;
+	font-family: "Arial", sans-serif;
+	padding: 20px;
+}
+#create_contact, #card_holder{
+	display: inline-block;
+	vertical-align: top;
+}
+#create_contact{
+	width: 230px;
+	height: 500px;
+}
+	#first_name, #last_name{
+		display: inline-block;
+	}
+	#first_name{
+		margin-bottom: 10px;
+	}
+	#last_name{
+		margin-bottom: 40px;
+	}
+	#description{
+		display: block;
+		margin-top: 20px;
+	}
+#card_holder{
+	display: inline-block;
+	width: 600px;
+	height: 900px;
+	text-align: center;
+}
+.card{
+	border: 2px solid black;
+	width: 280px;
+	height: 80px;
+	display: block;
+	margin: 20px auto;
+	padding: 10px;
+}
+	.card h1, .card h3{
+		font-weight: lighter;
+		text-align: center;
+	}

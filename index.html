@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ADV JQuery Assignment III: Contact Card</title>
+		<meta name="author" content="Kelly Howard"/>
+		<meta name="description" content="Using document.on function to activate dynamic content."/>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <script>
+	        $(document).ready(function(){
+	            $('#create_contact').submit(function(){
+				    $( "#card_holder" ).append("<div data-description='"+$("#description").val()+"' class='card'><h1>" + 
+				    	$('#first_name').val() + " " + $("#last_name").val()+"<h3>Click for description!</h3></h1></p></div>");
+					    return false;
+	            })
+	        });
+	        $(document).on("click", ".card", function(){
+	        	$(this).html(
+	        		"<p>" + $(this).data('description') + "</p>"
+        		);
+	        });
+	    </script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<form id="create_contact">
+				First name: <input type="text" id="first_name" placeholder="First Name">
+				Last name: <input type="text" id="last_name" placeholder="Last Name"/>
+				Description:<textarea name="" id="description" placeholder="Enter Description" rows=5 cols=33></textarea>
+				<input type="submit" value="Add User"/>
+			</form>
+			<div id="card_holder"></div>
+		</div>
+	</body>
+</html>
